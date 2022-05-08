@@ -11,6 +11,13 @@ spring:
          default-label: main
          uri: https://github.com/LiamJDesmond84/Photo-App-Spring-Cloud-Config-Repo
          #clone-on-start: true
+         
+  rabbitmq:
+     host: localhost
+#     port: 15672
+     port: 5672
+     username: guest
+     password: guest
 
 # For actuator refresh posts
 management:
@@ -19,6 +26,7 @@ management:
          exposure:
             include: busrefresh
          
+
 #eureka:
 #  client:
 #    register-with-eureka: true
