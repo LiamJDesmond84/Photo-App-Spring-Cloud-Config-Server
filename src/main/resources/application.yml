@@ -12,6 +12,12 @@ spring:
          uri: https://github.com/LiamJDesmond84/Photo-App-Spring-Cloud-Config-Repo
          #clone-on-start: true
 
+# For actuator refresh posts
+management:
+   endpoints:
+      web:
+         exposure:
+            include: busrefresh
          
 #eureka:
 #  client:
