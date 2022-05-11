@@ -4,9 +4,11 @@ server:
 spring:
   application:
     name: CONFIG-SERVER
+    
   # active profile
-  profiles:
-     active: native
+#  profiles:
+#     active: native
+
   cloud:
     config:
      server:
@@ -15,11 +17,11 @@ spring:
          uri: https://github.com/LiamJDesmond84/Photo-App-Spring-Cloud-Config-Repo
          #clone-on-start: true
          
-       # native application config location(local) if you want configs to come from here instead of GitHub(choose in spring.profiles.active)
-       # /// for Windows(I think), don't need to provide file name, just the folder it's in.  It will be an application.yml/properties file(Just like the default or GitHub Config Repo files)
-       native:
-          search-locations: file:///${user.home}/Desktop/ConfigsPlace/
-          # To test run this Config-Server then with Postman: GET http://8888/CONFIG-SERVER/native.  It should return your native application file configs.
+       ## native application config location(local) if you want configs to come from here instead of GitHub(choose in spring.profiles.active)
+       ## /// for Windows(I think), don't need to provide file name, just the folder it's in.  It will be an application.yml/properties file(Just like the default or GitHub Config Repo files)
+#       native:
+#          search-locations: file:///${user.home}/Desktop/ConfigsPlace/
+          ## To test run this Config-Server then with Postman: GET http://8888/CONFIG-SERVER/native.  It should return your native application file configs.
          
   rabbitmq:
      host: localhost
